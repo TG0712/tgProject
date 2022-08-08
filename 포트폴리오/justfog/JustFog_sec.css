@@ -1,0 +1,266 @@
+#sec1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#sec1_backGround{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+#sec1_backGround_color{
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+}
+
+#sec1_backGround_image{
+    position: absolute;
+    top:33%;
+    left: 30%;
+
+    width: 40%;
+}
+
+#sec1_Products{
+    position: absolute;
+    top:5%;
+
+    width: 100%;
+
+    text-align: center;
+    font-size: 70px;
+    cursor: default;
+}
+
+#productMenu{
+    position: absolute;
+    top: 90%;
+
+    width:100%;
+    height: 10%;
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.productMenu_text{
+
+    width: 25%;
+    height: 100%;
+
+
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+#starterKit{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#dod{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#AIO{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: white;
+}
+
+.cigarBox{
+    width: 13%;
+    height: 36.8%;
+    text-align: center;
+    border: 0px solid black;
+    cursor:pointer;
+
+}
+
+.cigar{width: 100%; height: 100%;}
+
+#sec2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#sec3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#sec4{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#sec5{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+
+.JuiceText{
+    position: absolute;
+    top: 10%;
+    left: -30%;
+
+    width: 20%;
+
+    font-size:5em;
+}
+
+#sec2img1{
+    position: absolute;
+    top: 25%;
+    left: -50%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+
+}
+
+#sec2img2{
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 55%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+}
+
+
+#sec3img1{
+    position: absolute;
+    top: -50%;
+    left: 10%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+}
+
+#sec3img2{
+
+    position: absolute;
+    top: 200%;
+    right: 10%;
+    width: 55%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+
+
+}
+
+#sec4img1{
+    position: absolute;
+    top: 25%;
+    left: -50%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+}
+
+#sec4img2{
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 55%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+}
+
+
+
+#sec5img{
+    position: absolute;
+    top: -50%;
+    left: 10%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.2em;
+}
+
+
+#sec1imgText{
+    width: 100%;
+    height: 40%;
+    font-size: 1.1em;
+}

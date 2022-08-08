@@ -1,0 +1,23 @@
+#footer {
+    position: absolute;
+    top: 85.5%;
+    left: 0;
+    width: 100%;
+    height: 14.5%;
+    background-color: #252525;
+    }
+
+#footerImg {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    }
+
+#footer_text {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    font-size: 15px;
+    color: #8F8F8F;
+    }
+

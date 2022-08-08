@@ -1,0 +1,74 @@
+#burger{
+    position: fixed;
+    top: 5%;
+    right: 1%;
+    width: 4.5%;
+    height: 8%;
+    border: 1px solid black;
+    background-color: black;
+
+}
+#burger div {
+    position: absolute;
+    width: 60%;
+    height: 5%;
+
+    left: 20%;
+    background-color: white;
+
+    cursor:pointer
+}
+
+#bar1{top: 35.5%;}
+#bar2{top: 48.5%;}
+#bar3{top: 61.5%;}
+
+
+
+
+
+#menuBar {
+    position: fixed;
+    top: 0;
+    right: -20%;
+
+    width: 20%;
+    height: 100%;
+
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.menu_contents{
+    width: 70%;
+    height: 15%;
+    left: 20%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#menuBar_about { position: absolute; top: 4.5%; }
+#menuBar_product { position: absolute; top: 19.5%; }
+#menuBar_distribution { position: absolute; top: 31.5%; }
+#menuBar_support { position: absolute; top: 42.5%; }
+#menuBar_Authenticity { position: absolute; top: 56%; }
+#menuBar_eLiquid { position: absolute; top: 67.5%; }
+#menuBar_b2bOnline { position: absolute; top: 80.5%; }
+
+.menu_contents_text{
+    width: 100%;
+    height: 15%;
+}
+
+.menu_contents_sub{
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+}
+
+.menu_contents_name{
+    width: 100%;
+    height: 18%;
+    cursor: pointer;
+}

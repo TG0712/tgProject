@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome! My Portfolio</title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<style>
+@font-face {
+    font-family: 'ParkYongJun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/ParkYongJun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a:link
+    {
+    color :#515259 ;
+    text-decoration : none ;
+    }
+
+a:visited
+    {
+    color : #515259 ;
+    text-decoration : none ;
+    }
+
+a:hover
+    {
+    color : blue ;
+    text-decoration : none ;
+    }
+
+/*전체 div*/
+#Envelope
+    {
+    position: relative;
+    top: 0%;
+
+    margin: 0;
+    border: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+
+    }
+
+/*서류봉투 컨테이너*/
+#openEnvelope1
+    {
+    position: absolute;
+    right: 2%;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+
+    overflow: hidden;
+
+    box-shadow: 1px 5px 40px black;
+    }
+
+/*서류봉투 이미지 컨테이너*/
+#openEnvelope
+    {
+    position: absolute;
+
+    left: 0%;
+
+    width: 100vw;
+    height: 100vh;
+    }
+
+/*서류봉투 이미지*/
+#Envelope_p
+    {
+    position: absolute;
+    top:0%;
+
+    width: 100vw;
+    height: 100vh;
+    }
+
+/* 서류봉투 화살표 이미지*/
+#arrow
+    {
+    position: absolute;
+    top: 83.5%;
+    right: -1%;
+
+    width: 14%;
+    height: 7%;
+    cursor: pointer;
+    }
+
+#arrowA
+    {
+    position: absolute;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    }
+
+
+/*종이 전체 컨테이너*/
+#allPaper
+    {
+    position: absolute;
+    top: 1.5%;
+    left: 0%;
+
+    width: 100%;
+    height: 100%;
+
+
+    overflow:hidden;
+    }
+
+/*종이 div 컨테이너*/
+.paper
+    {
+    position: absolute;
+    top:0%;
+    right:0%;
+
+    width: 100%;
+    height: 97%;
+
+    box-shadow: 2px 2px 8px gray;
+    }
+
+#thirdPaper
+    {
+    border: 2px solid #F0F0F0;
+    }
+
+/*종이 이미지 컨테이너*/
+.imgP img
+    {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 100%;
+    height: 100%;
+    }
+
+/*종이 이미지*/
+.imgPaper
+    {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 100%;
+    height: 99.1%;
+    }
+
+/*마스킹 테이프*/
+.Washitape1
+    {
+    position: absolute;
+    right: -7.3%;
+
+    width: 14%;
+    height: 7%;
+
+    cursor:pointer;
+    }
+
+
+.Washitape2
+    {
+    position: absolute;
+    right: 0%;
+
+    width: 100%;
+    height: 100%;
+    }
+
+
+.tapeFont
+    {
+    position: absolute;
+    top: 28%;
+    right: 55%;
+    font: 1.3vw 'ParkYongJun' ;
+    }
+
+/*종이 화살표*/
+.arrow1
+    {
+    position: absolute;
+    top: 85%;
+    right: 3%;
+
+    width: 14%;
+    height: 7%;
+
+    cursor:pointer;
+    }
+
+.arrow2
+    {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+    width: 100%;
+    height: 100%;
+
+    cursor:pointer;
+    }
+
+/*두 번째 페이지 텍스트*/
+/*기술 텍스트*/
+.secText1
+    {
+    position: absolute;
+    left: 25%;
+
+    font: 25px 'ParkYongJun' ;
+    color: #515259;
+    }
+#secT1 {top:10.5%;}
+#secT2 {top:18.5%;}
+#secT3 {top:27%;}
+#secT4 {top:35.5%;}
+
+
+.colorPen
+    {
+    position: absolute;
+
+    width: 100%;
+    opacity: 0.5;
+    }
+
+/*기술 게이지*/
+.grayGage
+    {
+    position: absolute;
+    left: 40%;
+
+    width: 25%;
+    height: 1.5%;
+
+    background-color: #F0F0F0;
+
+    border: 1px solid #515259;
+    border-radius: 8px;
+
+    }
+
+#secPyGage {top:11%;}
+#secJSGage {top:19.2%;}
+#secHTMLGage {top:27.5%;}
+#secCSSGage {top:36%;}
+
+.blackGage
+    {
+    position: absolute;
+    left: 0%;
+
+    width: 0%;
+    height: 100%;
+
+    background-color: #515259;
+
+    border-radius: 8px;
+    }
+
+/*기술 퍼센트*/
+.countNum
+    {
+    position: absolute;
+
+    font: 25px 'ParkYongJun' ;
+    color: #515259;
+
+    /*border: 2px solid black;*/
+    left: 70%;
+    }
+
+#countPH {top:10.5%;}
+#countJS {top:18.5%;}
+#countHTML {top:27%;}
+#countCss {top:35.5%;}
+
+
+
+/*교육과정 텍스트*/
+#secT-box
+    {
+    position: absolute;
+    top:26.5%;
+    left:32%;
+
+    width: 40%;
+    height: 50%;
+
+    color: #515259;
+    font: 25px 'ParkYongJun' ;
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    }
+
+.secText2 {margin-bottom:28px;}
+
+#secT5-text1 {margin-top: 20px; margin-bottom: 5px;}
+
+#secT5-text2 {margin-top: 10px;}
+
+
+
+
+/*포트폴리오 이미지*/
+
+.portCon
+    {
+    position: absolute;
+    top: 33%;
+
+    width: 13%;
+    height: 35%;
+
+
+    }
+
+.portImg
+    {
+    position: absolute;
+    top: 0%;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #515259;
+
+    opacity: 0;
+
+    text-align: center;
+    cursor: pointer;
+    }
+
+.portImg_Img
+    {
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    }
+
+.portText
+    {
+    position: absolute;
+    top: 42%;
+    left: 7%;
+
+    width: 30%;
+    height: 10%;
+
+    color: white;
+
+    font: 1.5vw 'ParkYongJun';
+
+    }
+
+.portPageText
+    {
+    position: absolute;
+    top: 110%;
+    left: 33%;
+    cursor: pointer;
+
+    font: 1.5vw 'ParkYongJun';
+    }
+
+
+/*플렉스의 플렉스 칸*/
+#contact-form
+    {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+
+    width: 70vw;
+    height: 100vh;
+
+    display: flex;
+
+
+    margin-right: 0%;
+    flex-wrap: wrap;
+    align-items: flex-center;
+    align-content: center;
+    justify-content: center;
+    }
+
+#contact-form label
+    {
+    font: 25px 'ParkYongJun';
+    }
+
+/*이메일 보내는 플렉스 칸*/
+.eflbox
+    {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 50%; /*넓이는 퍼센트로 줄고 늘고 하다가*/
+    min-width: 250px; /*최소 300px 넓이는 지켜라 해서 화면 줄이면 크기 유지함*/
+    margin-left: calc(0%); /*부모 객체의 속성에 따라 퍼센트*/
+    }
+
+/*사용자 이름, 이메일 적는 텍스트 박스*/
+.emailBox
+    {
+    width: 100%;
+    height: 3vh;
+
+    border-radius: 1.5px;
+    border: solid 1px #E0E2E7;
+    margin-bottom: 2.5%;
+    font-family: 'Noto Sans KR', sans-serif;
+    }
+
+/*이메일 내용 쓰는 텍스트 박스*/
+.textBox
+    {
+    width: 100%;
+    height: 30vh;
+    border: solid 1px #E0E2E7;
+    margin-bottom: 2.5%;
+    font-family: 'Noto Sans KR', sans-serif;
+    }
+
+/*이메일 보내기 버튼 박스*/
+#sendEmail_box
+    {
+    position: relative;
+    width: 10vw;
+    height: 5vh ;
+    min-width: 70px;
+    }
+
+/*이메일 보내는 버튼*/
+.sendEmail
+    {
+    position: absolute;
+    top:0;
+
+    width: 100%;
+    height: 100% ;
+
+    background-color:transparent;
+
+    border: none;
+    cursor: pointer;
+    font: 25px 'ParkYongJun';
+    }
+
+/*이메일 보내는 버튼 형광펜*/
+#lightPen
+    {
+    position: absolute;
+    top:0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(3deg);
+
+    opacity: 1;
+    }
+
+
+
+
+/*연락처 플렉스 칸*/
+#contactMe
+    {
+    position: relative;
+
+
+    margin-left: calc(3%);
+    margin-top: 2.5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 400px;
+    height: 400px;
+
+
+
+    transform: rotate(0deg);
+    }
+
+.contactMe1
+    {
+    position: absolute;
+    font: 25px 'ParkYongJun';
+    top: 15%;
+    left: 12%
+    }
+
+#postIt
+    {
+    position: absolute;
+    top:0%;
+    left: 0%;
+
+    width: 100%;
+    height: 80%;
+
+    min-width: 300px;
+    }
+
+
+/*프로필 컨테이너*/
+#AboutMe_Container
+    {
+    position: relative;
+    top: 0%;
+    left: 0%;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: normal;
+
+    font: 2vmax 'ParkYongJun';
+    }
+
+/*증명사진 학력사항 들어있는 플렉스 박스*/
+#AboutMe_Item_First
+    {
+    position: relative;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: normal;
+    }
+
+/*증명사진 박스*/
+#AboutMe
+    {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    min-width: 350px;
+    }
+
+/*증명사진*/
+#AboutMe_photo {width: 50%;}
+
+
+/*자격증 경력 들어있는 플렉스 박스*/
+#AboutMe_Item_second
+    {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    }
+
+/*취득 자격증*/
+#AboutMeL
+    {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    min-width: 350px;
+    }
+
+/*license div*/
+#license
+    {
+    background-color:#515259;
+    width: 80%;
+
+    color: #F0F0F0;
+    text-align:center;
+    margin-bottom: 4%;
+    }
+
+.lcsInfo {margin-bottom: 2%;}
+
+/*경력사항*/
+#AboutMeCareer
+    {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    min-width: 350px;
+    }
+
+/*carrer div*/
+#careerList
+    {
+    background-color:#515259;
+    width: 80%;
+
+    color: #F0F0F0;
+    text-align:center;
+    margin-bottom: 4%;
+    }
+
+.careerInfo {margin-bottom: 2%;}
+
+/*학력사항*/
+#AboutMeCon
+    {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    min-width: 350px;
+    }
+
+#Edu
+    {
+    background-color:#515259;
+    width: 80%;
+
+    color: #F0F0F0;
+    text-align:center;
+    margin-bottom: 4%;
+    }
+
+.EduInfo {margin-bottom: 2%;}
+
+/*내 이름*/
+#AboutName {margin-bottom: 2%;}
+#AboutBirth {margin-bottom: 2%;}
+
+/*(스킬 페이지(페이지 2)에 추가된 거)*/
+
+#pythonBox
+    {
+    position: absolute;
+    width:100%;
+    height:100%;
+    display: block;
+    }
+
+
+#pythonText
+    {
+    position: absolute;
+    top: 35%;
+    left: 83%;
+    font: 2vw 'ParkYongJun' ;
+    }
+
+.works
+    {
+    position: absolute;
+    top: 62%;
+    width: 14.5%;
+    margin: 0;
+    }
+
+.PGUI
+    {width: 100%;}
+
+#works1 {width: 12.5%; left: 20%;}
+#works2 {width: 12.5%; left: 35%;}
+#works3 {left: 50%;}
+#works4 {width: 13%; left: 67%;}
+
+
+#downArrow
+    {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+
+    width: 5%;
+    height: 60%;
+
+    opacity:0.8;
+    }
+
+.dwnArw
+    {
+    width: 100%;
+    height: 100%;
+    }
+
+
+</style>
+
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('zFG5f0qClZxwI3_tb');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function()
+        {
+        document.getElementById('contact-form').addEventListener
+            (
+            'submit', function(event)
+                {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_916rfuf', 'template_nppsyt5', this)
+                    .then
+                        (
+                        function()
+                            {
+                            console.log('SUCCESS!');
+                            },
+
+                        function(error)
+                            {
+                            console.log('FAILED...', error);
+                            }
+                        );
+                }
+            );
+        }
+</script>
+
+</head>
+
+<body style="margin:0; padding:0; border:0;">
+
+<div id="Envelope">
+    <!--마지막 채상 이미지-->
+    <div id="table" style="width: 1920px; height: 100%; position: absolute; top: 0%; left:0%">
+        <img src="IMG/table2.jpg" style="width: 100%; height: 100%;">
+    </div>
+
+    <div id="openEnvelope1">
+        <div id="openEnvelope">
+            <!--서류봉투 이미지-->
+            <img id="Envelope_p" src="IMG/paperback2.png">
+
+            <!--화살표 이미지-->
+            <div  id="arrow" onclick="next()">
+                <img id="arrowA" src="IMG/arrow.png">
+            </div>
+        </div>
+    </div>
+
+
+    <!--종이 전체 컨테이너-->
+    <div id="allPaper">
+        <!--종이 이미지 컨테이너-->
+        <div id="fourthPaper" class="paper">
+            <!--종이 이미지4-->
+            <div class="imgP">
+                <img class="imgPaper" id="paperImg4" src="IMG/whitePaper.jpg">
+            </div>
+
+            <!--마스킹 테이프4-->
+                <div id="fourthP" class="Washitape1" onclick="next_T(this)">
+
+                    <img class="Washitape2" src="IMG/Washitape_pastelblue.png">
+                    <div id="contact" class="tapeFont">Contact</div>
+                </div>
+
+            <!--이메일 칸-->
+            <form id="contact-form">
+
+                <div class="eflbox">
+                    <input class="emailBox" type="hidden" name="contact_number">
+
+                    <label>Send e-mail </label>
+                    <textarea class="textBox" name="message" placeholder="Write your message"></textarea>
+
+                    <div id="sendEmail_box">
+                        <img id="lightPen" src="IMG/blueLightPen.png">
+                        <button class="sendEmail" type="submit" value="Send message">Send</button>
+                    </div>
+                </div>
+
+
+                <div id="contactMe" onmouseover="divRotate(this)" onmouseout="divRotateBack(this)">
+                    <img id="postIt" src="IMG/postIt.png">
+                    <div class="contactMe1">
+                        <div class="contactMe2">kakao Talk: "lgk0712";</div>
+                            <br>
+                        <div class="contactMe2">Instargram: "taegun_yi";</div>
+                            <br>
+                        <div class="contactMe2">E-Mail: "tifm7890@gmail.com";</div>
+                    </div>
+                </div>
+            </form>
+
+            <!--종이 화살표4-->
+            <div id="fourth" class="arrow1" onclick="next_p(this)">
+                 <img class="arrow2" src="IMG/arrow.png">
+            </div>
+
+
+        </div>
+
+        <div id="thirdPaper" class="paper">
+
+            <!--종이 이미지3-->
+            <div class="imgP">
+                <img class="imgPaper" id="paperImg3" src="IMG/monoon.png">
+            </div>
+
+            <!--마스킹 테이프3-->
+            <div id="thirdP" class="Washitape1" onclick="next_T(this)">
+
+                <img class="Washitape2" src="IMG/Washitape_pastelgreen.png">
+                <div id="portfolio" class="tapeFont">Portfolio</div>
+            </div>
+
+            <!--종이 화살표3-->
+            <div id="third" class="arrow1" onclick="next_p(this)">
+                 <img class="arrow2" src="IMG/arrow.png">
+            </div>
+
+            <!--포트폴리오 이미지 컨테이너-->
+
+            <div id="port1Con" class="portCon"  onclick="window.open('randomtower/randomtower_F.html')">
+
+                <img id="port1ImgBox" class="portImg_Img" src="IMG/port1.jpg">
+                <div id="port1" class="portImg" onmouseover="portOver(this)" onmouseout="portOut(this)">
+                    <div class="portText">Portfolio1</a></div>
+                </div>
+                <div class="portPageText" onmouseover="portOver(port1)" onmouseout="portOut(port1)">
+                    <a href="randomtower/randomtower_F.html" target="_blank">
+                    RANDOM TOWER DEFENCE
+                    </a>
+                </div>
+            </div>
+
+            <div id="port2Con" class="portCon" onclick="window.open('mellon/mellon_F.html')">
+                <img id="port2ImgBox" class="portImg_Img" src="IMG/port2.jpg">
+                <div id="port2" class="portImg" onmouseover="portOver(this)" onmouseout="portOut(this)">
+                    <div class="portText">Portfolio2</div>
+                </div>
+                <div class="portPageText" onmouseover="portOver(port2)" onmouseout="portOut(port2)">
+                    <a href="mellon/mellon_F.html" target="_blank">
+                    MELLON
+                    </a>
+                </div>
+            </div>
+
+            <div id="port3Con" class="portCon" onclick="window.open('daks/daks.html')">
+                <img id="port3ImgBox" class="portImg_Img" src="IMG/port3.png">
+                <div id="port3" class="portImg" onmouseover="portOver(this)" onmouseout="portOut(this)">
+                    <div class="portText">Portfolio3</div>
+                </div>
+                <div class="portPageText" onmouseover="portOver(port3)" onmouseout="portOut(port3)">
+                <a href="daks/daks.html" target="_blank">
+                    DAKS
+                </a>
+                </div>
+            </div>
+
+            <div id="port4Con" class="portCon" onclick="window.open('justfog/justfog.html')">
+                <img id="port4ImgBox" class="portImg_Img" src="IMG/port4.png">
+                <div id="port4" class="portImg" onmouseover="portOver(this)" onmouseout="portOut(this)">
+                    <div class="portText">Portfolio4</div>
+                </div>
+                <div class="portPageText" onmouseover="portOver(port4)" onmouseout="portOut(port4)">
+                    <a href="justfog/justfog.html" target="_blank">
+                    JUST FOG
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="secondPaper" class="paper">
+
+
+            <!--종이 이미지2-->
+            <div class="imgP">
+                <img class="imgPaper" id="paperImg2" src="IMG/paper.jpg">
+            </div>
+
+            <!--마스킹 테이프2-->
+            <div id="secondP" class="Washitape1" onclick="next_T(this)">
+                <img class="Washitape2"  src="IMG/Washitape_pastelyellow.png">
+                <div id="capacity" class="tapeFont">Capacity</div>
+            </div>
+
+            <!--역량-->
+            <div id="secT1" class="secText1">
+                <img class="colorPen" src="IMG/bluePen.png">
+                "Python"
+            </div>
+            <div id="secPyGage" class="grayGage">
+                <div id="secPGage" class="blackGage"></div>
+            </div>
+            <div id="countPH" class="countNum">0</div>
+
+            <div id="secT2" class="secText1">
+                <img class="colorPen" src="IMG/yellowPen.png">
+                "JavaScript"
+            </div>
+            <div id="secJSGage" class="grayGage">
+                <div id="secJGage" class="blackGage"></div>
+            </div>
+            <div id="countJS" class="countNum">0</div>
+
+            <div id="secT3" class="secText1">
+                <img class="colorPen" src="IMG/orangePen.png">
+                "HTML5"
+            </div>
+            <div id="secHTMLGage" class="grayGage">
+                <div id="secHGage" class="blackGage"></div>
+            </div>
+            <div id="countHTML" class="countNum">0</div>
+
+            <div id="secT4" class="secText1">
+                <img class="colorPen" src="IMG/redPen.png">
+                "CSS3"
+            </div>
+            <div id="secCSSGage" class="grayGage">
+                <div id="secCGage" class="blackGage"></div>
+            </div>
+
+            <div id="countCss" class="countNum">0</div>
+
+
+
+            <div id="secT-box">
+                <div id="secT5" class="secText2">이수 교육과정</div>
+                <div id="secT5-text1">미래융합교육원(대전)</div>
+                <div id="secT5-text2">[비전공자 과정]빅데이터 UI & 프론트엔드 웹 개발</div>
+            </div>
+
+            <!--파이썬 작업물 상자-->
+            <div id="pythonBox">
+                <div id="pythonText">
+                    파이썬<br>프로젝트
+                </div>
+                <!--파이썬 작업물 이미지-->
+                <div id="works1" class="works">
+                    <img class="PGUI" src="IMG/GUI_img.png">
+                </div>
+
+                <div id="works2" class="works">
+                    <img class="PGUI" src="IMG/search_img.png">
+                </div>
+
+                <div id="works3" class="works">
+                    <img class="PGUI" src="IMG/melonChart_img.png">
+                </div>
+
+                <div id="works4" class="works">
+                    <img class="PGUI" src="IMG/map_img.png">
+                </div>
+
+                <!--작업물 화살표-->
+                <div id="downArrow" class="dwnArw_box">
+                    <img class="dwnArw" src="IMG/downarrow.png">
+                </div>
+
+            </div>
+
+            <!--종이 화살표2-->
+            <div id="second" class="arrow1" onclick="next_p(this)">
+                 <img class="arrow2" src="IMG/arrow.png">
+            </div>
+
+        </div>
+
+        <div id="firstPaper" class="paper">
+
+            <!--종이 이미지1-->
+            <div class="imgP">
+                <img class="imgPaper" id="paperImg1" src="IMG/whitePaper.jpg">
+            </div>
+
+            <!--마스킹 테이프1-->
+            <div id="firstP" class="Washitape1" onclick="next_T(this)">
+                <img class="Washitape2"  src="IMG/Washitape_pastelpink.png">
+                <div id="career" class="tapeFont">About Me</div>
+            </div>
+
+            <!--내 프로필-->
+            <div id="AboutMe_Container" class="About1">
+                <div id="AboutMe_Item_First" class="About2">
+                    <div id="AboutMe" class="About3">
+                        <img id="AboutMe_photo" src="IMG/man.png">
+                    </div>
+                    <div id="AboutMeCon" class="About3">
+                        <div id="AboutName">이경구</div>
+                        <div id="AboutBirth">1991. 07. 12</div>
+                        <div id="Edu">학력 사항</div>
+                        <div class="EduInfo">2010. 03 ~ 2017. 02</div>
+                        <div class="EduInfo">대전대학교(경제학/경영학) 졸업</div>
+                    </div>
+                </div>
+
+                <div id="AboutMe_Item_second" class="About2">
+                    <div id="AboutMeL" class="About3">
+                        <div id="license">취득 자격증</div>
+                        <div class="lcsInfo">2017. 02. 전산회계 2급 </div>
+                        <div class="lcsInfo">2017. 02. 운전면허 2종 </div>
+                        <div class="lcsInfo">2016. 12. 문서실무사 1급 </div>
+                        <div class="lcsInfo">2015. 06. ITQ 한글파워포인트 </div>
+                        <div class="lcsInfo">2014. 10. 펀드투자상담사 </div>
+                    </div>
+                    <div id="AboutMeCareer" class="About3">
+                        <div id="careerList">경력 사항</div>
+                        <div class="careerInfo">2020. 01 ~ 2020. 05</div>
+                        <div class="careerInfo">대한건설협회(팀원)</div>
+                        <div class="careerInfo">2018. 05 ~ 2018. 07</div>
+                        <div class="careerInfo">청년상인스타트업지원단(사원)</div>
+                        <div class="careerInfo">2017. 03 ~ 2018.02</div>
+                        <div class="careerInfo">대전대학교 재무팀(팀원)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--종이 화살표1-->
+            <div id="first" class="arrow1" onclick="next_p(this)">
+                <img class="arrow2" src="IMG/arrow.png">
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<style>
+    /*스킬 미디어 쿼리*/
+@media (max-width: 920px)
+    {
+    /*마스킹 테이프 텍스트 크기*/
+    .tapeFont {font: 20px 'ParkYongJun';}
+
+    /*마스킹 테이프 위치, 크기*/
+    .Washitape1
+        {
+        position: absolute;
+        right: -20.3%;
+
+        width: 40%;
+        height: 7%;
+        }
+
+    /*기술 이름 위치*/
+    .secText1 {left:33.5%;}
+
+    /*게이지 위치*/
+    #secPyGage {top:15%;}
+    #secJSGage {top:23.5%;}
+    #secHTMLGage {top:31.7%;}
+    #secCSSGage {top:40%;}
+
+    /*퍼센트 위치*/
+    #countPH {top:15%;}
+    #countJS {top:23.5%;}
+    #countHTML {top:31.7%;}
+    #countCss {top:40%;}
+
+    /*교육과정 텍스트 위치*/
+    #secT-box {top: 38.5%}
+    .secText2 {margin-bottom: 0px;}
+    #secT5-text1 {margin-top: 37px; margin-bottom: 5px;}
+    #secT5-text2 {margin-top: 2px;}
+
+    /*파이썬 작업물*/
+    #pythonBox {display: none;}
+    }
+</style>
+
+
+
+<script>
+//종이 id
+let firstPaper = document.getElementById("firstPaper")
+let secondPaper  = document.getElementById("secondPaper")
+let thirdPaper = document.getElementById("thirdPaper")
+let fourthPaper = document.getElementById("fourthPaper")
+
+//테이프 id
+let firstP = document.getElementById("firstP")
+let secondP = document.getElementById("secondP")
+let thirdP = document.getElementById("thirdP")
+let fourthP = document.getElementById("fourthP")
+
+//테이프 위치 스타일
+firstP.style.top = "10%";
+firstP.style.transform = "rotate(2deg)";
+
+secondP.style.top = "17%";
+
+thirdP.style.top = "24%";
+thirdP.style.transform = "rotate(-4deg)";
+
+
+fourthP.style.top = "31%";
+fourthP.style.transform = "rotate(4deg)";
+
+
+
+
+//서류봉투 id
+let openEnvelope1 = document.getElementById("openEnvelope1");
+let arrow = document.getElementById("arrow");
+
+
+//서류봉투 모션
+function next()
+    {
+    if (openEnvelope1.style.right != "90%")
+        {
+        openEnvelope1.style.transition = "3s";
+        openEnvelope1.style.right = "90%";
+
+        arrow.style.transition = "3s";
+        let arrTrf = arrow.style.transform = "rotate(180deg)";
+        }
+
+    else if (openEnvelope1.style.right == "90%")
+        {
+        openEnvelope1.style.transition = "3s";
+        openEnvelope1.style.right = "5%";
+
+        arrow.style.transition = "3s";
+        let arrTrf = arrow.style.transform = "rotate(0deg)";
+
+        firstPaper.style.transition = "3s";
+        firstPaper.style.right = "0%";
+
+        secondPaper.style.transition = "3s";
+        secondPaper.style.right = "0%";
+
+        thirdPaper.style.transition = "3s";
+        thirdPaper.style.right = "0%";
+
+        fourthPaper.style.transition = "3s";
+        fourthPaper.style.right = "0%";
+        }
+    }
+
+
+//종이 모션
+
+//퍼센트 숫자 객체 가져오기
+let countPH = document.getElementById("countPH");
+let countJS = document.getElementById("countJS");
+let countHTML = document.getElementById("countHTML");
+let countCss = document.getElementById("countCss");
+
+//화살표로 이동
+
+function next_p(obj)
+    {
+    //종이 객체 아이디 불러오기
+    let arrowM = document.getElementById(obj.id + "Paper");
+
+    //테이플 글씨 객체 불러오기
+    let career = document.getElementById("career");
+    let capacity = document.getElementById("capacity");
+    let portfolio = document.getElementById("portfolio");
+    let contact = document.getElementById("contact");
+
+    arrowM.style.transition = "2s";
+    arrowM.style.right = "85%";
+
+    //첫 번째 누를 때
+    if (arrowM.id == "firstPaper")
+        {
+        moveGage();
+        tapeText_R(career);
+
+        /*스킬 퍼센트 올라가는 모션*/
+
+        let perNum = 0;
+        let perNumJ = 0;
+        let perNumH = 0;
+        let perNumC = 0;
+
+        CNOP = setInterval(countOnP, 25);
+        CNOJ = setInterval(countOnJ, 25);
+        CNOH = setInterval(countOnH, 25);
+        CNOC = setInterval(countOnC, 25);
+
+        //if문에 있는 숫자 조정하면 됨
+        function countOnP()
+            {
+            if (perNum <= 60)
+                {
+                countPH.innerHTML = perNum + "%";
+                perNum++;
+                }
+            }
+
+        function countOnJ()
+            {
+            if (perNumJ <= 70)
+                {
+                countJS.innerHTML = perNumJ + "%";
+                perNumJ++;
+                }
+            }
+
+        function countOnH()
+            {
+            if (perNumH <= 70)
+                {
+                countHTML.innerHTML = perNumH + "%";
+                perNumH++;
+                }
+            }
+
+        function countOnC()
+            {
+            if (perNumC <= 70)
+                {
+                countCss.innerHTML = perNumC + "%";
+                perNumC++;
+                }
+            }
+        }
+
+    //두 번째 누를때
+    else if(arrowM.id == "secondPaper")
+        {
+        moveGage_T();
+        tapeText_R(capacity);
+
+        /*스킬 퍼센트 내려가는 모션*/
+
+        // 숫자는 여기있는 걸 조정하면 됨(위에 숫자 확인하고)
+        let perNum = 60;
+        let perNumJ = 70;
+        let perNumH = 70;
+        let perNumC = 80;
+
+        CNOP = setInterval(countOnP, 25);
+        CNOJ = setInterval(countOnJ, 25);
+        CNOH = setInterval(countOnH, 25);
+        CNOC = setInterval(countOnC, 25);
+
+        function countOnP()
+            {
+            if (perNum >= 0)
+                {
+                countPH.innerHTML = perNum + "%";
+                perNum--;
+                }
+            }
+
+        function countOnJ()
+            {
+            if (perNumJ >= 0)
+                {
+                countJS.innerHTML = perNumJ + "%";
+                perNumJ--;
+                }
+            }
+
+        function countOnH()
+            {
+            if (perNumH >= 0)
+                {
+                countHTML.innerHTML = perNumH + "%";
+                perNumH--;
+                }
+            }
+
+        function countOnC()
+            {
+            if (perNumC >= 0)
+                {
+                countCss.innerHTML = perNumC + "%";
+                perNumC--;
+                }
+            }
+        }
+
+    //세 번째 누를 때
+    else if (arrowM.id == "thirdPaper")
+        {
+        tapeText_R(portfolio);
+        }
+
+    //네 번째 누를 때
+    else if (arrowM.id == "fourthPaper")
+        {
+        tapeText_R(contact);
+        }
+    }
+
+//테이프로 이동
+function next_T(obj)
+    {
+    let tapeM = document.getElementById(obj.id + "aper");
+
+    tapeM.style.transition = "2s";
+    tapeM.style.right = "0%";
+
+
+    if (tapeM.id == "firstPaper")
+        {
+        moveGage_T();
+        tapeText_L(career);
+
+        /*스킬 퍼센트 내려가는 모션*/
+
+        // 숫자는 여기있는 걸 조정하면 됨(위에 숫자 확인하고)
+        let perNum = 60;
+        let perNumJ = 70;
+        let perNumH = 70;
+        let perNumC = 80;
+
+        CNOP = setInterval(countOnP, 25);
+        CNOJ = setInterval(countOnJ, 25);
+        CNOH = setInterval(countOnH, 25);
+        CNOC = setInterval(countOnC, 25);
+
+        function countOnP()
+            {
+            if (perNum >= 0)
+                {
+                countPH.innerHTML = perNum + "%";
+                perNum--;
+                }
+            }
+
+        function countOnJ()
+            {
+            if (perNumJ >= 0)
+                {
+                countJS.innerHTML = perNumJ + "%";
+                perNumJ--;
+                }
+            }
+
+        function countOnH()
+            {
+            if (perNumH >= 0)
+                {
+                countHTML.innerHTML = perNumH + "%";
+                perNumH--;
+                }
+            }
+
+        function countOnC()
+            {
+            if (perNumC >= 0)
+                {
+                countCss.innerHTML = perNumC + "%";
+                perNumC--;
+                }
+            }
+        }
+
+    else if (tapeM.id == "secondPaper")
+        {
+        moveGage();
+        tapeText_L(capacity);
+
+
+        //스킬 퍼센트 올라가는 모션
+
+        let perNum = 0;
+        let perNumJ = 0;
+        let perNumH = 0;
+        let perNumC = 0;
+
+        CNOP = setInterval(countOnP, 25);
+        CNOJ = setInterval(countOnJ, 25);
+        CNOH = setInterval(countOnH, 25);
+        CNOC = setInterval(countOnC, 25);
+
+        //if문에 있는 숫자 조정하면 됨
+        function countOnP()
+            {
+            if (perNum <= 60)
+                {
+                countPH.innerHTML = perNum + "%";
+                perNum++;
+                }
+            }
+
+        function countOnJ()
+            {
+            if (perNumJ <= 70)
+                {
+                countJS.innerHTML = perNumJ + "%";
+                perNumJ++;
+                }
+            }
+
+        function countOnH()
+            {
+            if (perNumH <= 70)
+                {
+                countHTML.innerHTML = perNumH + "%";
+                perNumH++;
+                }
+            }
+
+        function countOnC()
+            {
+            if (perNumC <= 70)
+                {
+                countCss.innerHTML = perNumC + "%";
+                perNumC++;
+                }
+            }
+        }
+
+    else if (tapeM.id == "thirdPaper")
+        {
+        tapeText_L(portfolio);
+        }
+
+    else if (tapeM.id == "fourthPaper")
+        {
+        tapeText_L(contact);
+        }
+    }
+
+let secPGage = document.getElementById("secPGage")
+let secJGage = document.getElementById("secJGage")
+let secHGage = document.getElementById("secHGage")
+let secCGage = document.getElementById("secCGage")
+
+//게이지를 %로
+function moveGage()
+    {
+    secPGage.style.transition = "3s";
+    secPGage.style.width = "60%";
+
+    secJGage.style.transition = "3s";
+    secJGage.style.width = "70%";
+
+    secHGage.style.transition = "3s";
+    secHGage.style.width = "70%";
+
+    secCGage.style.transition = "3s";
+    secCGage.style.width = "70%";
+    }
+
+//게이지를 0%로
+function moveGage_T()
+    {
+    secPGage.style.transition = "3s";
+    secPGage.style.width = "0%";
+
+    secJGage.style.transition = "3s";
+    secJGage.style.width = "0%";
+
+    secHGage.style.transition = "3s";
+    secHGage.style.width = "0%";
+
+    secCGage.style.transition = "3s";
+    secCGage.style.width = "0%";
+    }
+
+//테이프 글씨를 왼쪽으로
+function tapeText_L(ID)
+    {
+    let tapeTextId_L = document.getElementById(ID.id);
+
+    tapeTextId_L.style.transition = "2s";
+    tapeTextId_L.style.right = "55%";
+    }
+
+//테이프 글씨를 오른쪽으로
+function tapeText_R(ID)
+    {
+    let tapeTextId_R = document.getElementById(ID.id);
+
+    tapeTextId_R.style.transition = "2s";
+    tapeTextId_R.style.right = "15%";
+    }
+
+let port1Con = document.getElementById("port1Con");
+port1Con.style.left = "24.3%";
+
+let port2Con = document.getElementById("port2Con");
+port2Con.style.left = "40%";
+
+let port3Con = document.getElementById("port3Con");
+port3Con.style.left = "56%";
+
+let port4Con = document.getElementById("port4Con");
+port4Con.style.left = "72.3%";
+
+
+let port1 = document.getElementById("port1");
+let port2 = document.getElementById("port2");
+let port3 = document.getElementById("port3");
+let port4 = document.getElementById("port4");
+
+
+//포트폴리오 마우스 올리면 올라가는 이벤트
+function portOver(obj)
+    {
+    let portM = document.getElementById(obj.id + "Con");
+
+    if (portM.id == "port1Con")
+        {
+        port1Con.style.transition = "1s";
+        port1Con.style.top = "28%";
+
+        portOverOct(port1);
+        portOverScale(port1Con);
+        }
+
+    else if (portM.id == "port2Con")
+        {
+        port2Con.style.transition = "1s";
+        port2Con.style.top = "28%";
+
+        portOverOct(port2);
+        portOverScale(port2Con);
+        }
+
+    else if (portM.id == "port3Con")
+        {
+        port3Con.style.transition = "1s";
+        port3Con.style.top = "28%";
+
+        portOverOct(port3);
+        portOverScale(port3Con);
+        }
+
+
+    else if (portM.id == "port4Con")
+        {
+        port4Con.style.transition = "1s";
+        port4Con.style.top = "28%";
+
+        portOverOct(port4);
+        portOverScale(port4Con);
+        }
+    }
+
+//포트폴리오 마우스 벗어나면 내려가는 이벤트
+function portOut(obj)
+    {
+    let portM = document.getElementById(obj.id + "Con");
+
+    if (portM.id == "port1Con")
+        {
+        port1Con.style.transition = "1s";
+        port1Con.style.top = "33%";
+
+        portOutOct(port1);
+        portOutScale(port1Con);
+
+        }
+
+    else if (portM.id == "port2Con")
+        {
+        port2Con.style.transition = "1s";
+        port2Con.style.top = "33%";
+
+        portOutOct(port2);
+        portOutScale(port2Con);
+
+        }
+
+    else if (portM.id == "port3Con")
+        {
+        port3Con.style.transition = "1s";
+        port3Con.style.top = "33%";
+
+        portOutOct(port3);
+        portOutScale(port3Con);
+        }
+
+
+    else if (portM.id == "port4Con")
+        {
+        port4Con.style.transition = "1s";
+        port4Con.style.top = "33%";
+
+        portOutOct(port4);
+        portOutScale(port4Con);
+        }
+    }
+
+//마우스 오버했을 때 불투명도
+function portOverOct(ID)
+    {
+    let portImg = document.getElementById(ID.id);
+
+    portImg.style.transition = "2s";
+    portImg.style.opacity = "0.8";
+    }
+
+//마우스 아웃했을 때 불투명도
+function portOutOct(ID)
+    {
+    let portImg = document.getElementById(ID.id);
+
+    portImg.style.transition = "2s";
+    portImg.style.opacity = "0";
+    }
+
+//마우스 오버했을 때 포트폴리오 scale
+function portOverScale(ID)
+    {
+    let portZindex = document.getElementById(ID.id);
+
+    portZindex.style.transition = "1s";
+    portZindex.style.transform = "scale(1.2)";
+    portZindex.style.zIndex = "1";
+    }
+
+//마우스 아웃했을 때 포트폴리오 scale
+function portOutScale(ID)
+    {
+    let portZindex = document.getElementById(ID.id);
+
+    portZindex.style.transition = "1s";
+    portZindex.style.transform = "scale(1)";
+    portZindex.style.zIndex = "0";
+    }
+
+
+//마우스 오버했을 때 포스트잇 기울기
+function divRotate(obj)
+    {
+    obj.style.transform = "rotate(-5deg)";
+    obj.style.top = "-8px";
+    obj.style.left = "8px";
+    }
+
+function divRotateBack(obj)
+    {
+    obj.style.transform = "rotate(0deg)";
+    obj.style.top = "8px";
+    obj.style.left = "-8px";
+    }
+
+
+//형광펜 투명도
+let lightPen = document.getElementById("lightPen");
+let sendEmail_box = document.getElementById("sendEmail_box");
+
+function lightPenOPCT()
+    {
+    /*마우스 버튼 눌렀을 때 투명도*/
+    sendEmail_box.addEventListener('mousedown', penDown);
+    function penDown()
+        {
+        console.log("투명해져랏!")
+        lightPen.style.opacity = "0.5";
+        }
+
+    /*마우스 버튼 올렸을 때 투명도*/
+    sendEmail_box.addEventListener('mouseup', penUp);
+    function penUp()
+        {
+        console.log("투명해져랏!")
+        lightPen.style.opacity = "1";
+        }
+    }
+
+lightPenOPCT();
+
+</script>
+
+
+</body>
+
+</html>

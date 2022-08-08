@@ -1,0 +1,225 @@
+#Sec2
+    {
+    display : block ;
+    width : 100% ;
+    height : 70vh ;
+
+    position : relative ;
+
+    background-color : white ;
+    }
+
+/*프레임*/
+#Sec2Frame
+    {
+    display : flex ;
+    width : 100% ;
+    height : 100% ;
+    }
+
+/*배너*/
+#Sec2MainBanner
+    {
+    display : inline-block ;
+    width : 40% ;
+    height : 90% ;
+
+    background-image : url("IMG/Sec2MainBanner.jpg") ;
+    background-size : 160% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+/*슬라이드프레임*/
+#Sec2SlideFrame
+    {
+    display : inline-block ;
+    width : 60% ;
+    height : 90% ;
+
+    position : relative ;
+    overflow : hidden ;
+    }
+
+/*프레임 안에 있는 슬라이드*/
+#Sec2SlideInFrame
+    {
+    display : flex ;
+    width : 900% ;
+    height : 100% ;
+
+    position : absolute ;
+    left : -100% ;
+    top : 0% ;
+    transition : 2s ;
+    }
+
+.Sec2Slides
+    {
+    display : inline-block ;
+    width : 100% ;
+    height : 100% ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideGC
+    {
+    background-image : url("IMG/Sec2SlideG.png") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideA
+    {
+    background-image : url("IMG/Sec2SlideA.jpg") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideB
+    {
+    background-image : url("IMG/Sec2SlideB.jpg") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideC
+    {
+    background-image : url("IMG/Sec2SlideC.png") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideD
+    {
+    background-image : url("IMG/Sec2SlideD.png") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideE
+    {
+    background-image : url("IMG/Sec2SlideE.png") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideF
+    {
+    background-image : url("IMG/Sec2SlideF.png") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideG
+    {
+    background-image : url("IMG/Sec2SlideG.png") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2SlideInFrame > #Sec2SlideAC
+    {
+    background-image : url("IMG/Sec2SlideA.jpg") ;
+    background-size : 100% 90% ;
+    background-repeat : no-repeat ;
+    background-position : center center ;
+    }
+
+#Sec2LeftButton
+    {
+    display : inline-block ;
+    width : 100px ;
+    height : 100px ;
+
+    position : absolute ;
+    left : 40% ;
+    top : 40% ;
+
+    text-align : center ;
+    font : 3.5vw 'yg-jalnan' ;
+    color : #FF7C98 ;
+
+    border : 5px solid #FF7C98 ;
+    border-radius : 50px ;
+
+    opacity : 0.6 ;
+    cursor : pointer ;
+    transition : 2s ;
+    }
+
+#Sec2LeftButton:hover
+    {
+    opacity : 1 ;
+    }
+
+#Sec2RightButton
+    {
+    display : inline-block ;
+    width : 100px ;
+    height : 100px ;
+
+    position : absolute ;
+    right : 0% ;
+    top : 40% ;
+
+    text-align : center ;
+    font : 3.5vw 'yg-jalnan' ;
+    color : #FF7C98 ;
+
+    border : 5px solid #FF7C98 ;
+    border-radius : 50px ;
+
+    opacity : 0.6 ;
+    cursor : pointer ;
+    transition : 2s ;
+    }
+
+#Sec2RightButton:hover
+    {
+    opacity : 1 ;
+    }
+
+#Sec2SlideCheck
+    {
+    display : flex ;
+    justify-content: flex-start;
+    width : 20% ;
+    height : 5% ;
+
+    position : absolute ;
+    left : 40% ;
+    top : 80% ;
+
+    border : px solid black ;
+    }
+
+.SSCs
+    {
+    display : inline-block ;
+    width : 20px ;
+    height : 20px ;
+
+    margin-top : 5px ;
+    margin-left : 10px ;
+
+    border : 2px solid white ;
+    border-radius : 50px ;
+
+    background-color : white ;
+    transition : 1s ;
+
+    cursor : pointer ;
+    }
+
+#SSC1
+    {
+    background-color : #FF7C98 ;
+    }
